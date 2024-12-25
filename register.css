@@ -1,0 +1,11 @@
+.d1{
+    height:500px;
+    width:700px;
+    border:2px solid black;
+}
+.d{
+    float: left;
+    margin-left: 270px;
+    /* margin-right: 100px; */
+
+}

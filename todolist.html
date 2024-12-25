@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>todolist</title>
+</head>
+
+<body>
+    <h1 style="display: inline;"id="id2">To do list</h1><br>
+    <input id="in-1" type="text" value=" ">
+    <button onclick="addTasK()"> Add</button>
+    <ul id="id1">
+
+    </ul>
+    <script>
+        let taskcount = 0;
+        const ulElem = document.getElementById("id1");
+        const inputElem = document.getElementById("in-1");
+        let h1ele = document.getElementById("id2");
+        h1ele.style.backgroundColor = "red";
+        setInterval(() => {
+            if (h1ele.style.backgroundColor == "green") {
+                h1ele.style.backgroundColor = "red";
+            }
+            else {
+                h1ele.style.backgroundColor = "green";
+
+            }
+
+        }, 500)
+        function addTasK() {
+            if (inputElem.value != " ") {
+
+                const newLi = document.createElement("li");
+                newLi.id = "li-" + taskcount;
+                taskcount++;
+                newLi.innerText = inputElem.value;
+                ulElem.appendChild(newLi);
+                inputElem.value = " ";
+            }
+
+        }
+        
+    </script>
+</body>
+
+</html>

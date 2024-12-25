@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>js</title>
+    </head>
+    <body>
+        <div id="div1">
+            hello world
+        </div>
+
+        <button>
+            click me
+        </button>
+    </body>
+    <script>
+        let divele=document.getElementById("div1");
+        divele.style.backgroundColor='green';
+
+        setInterval(() => {
+            if(divele.style.backgroundColor=="green"){
+            divele.style.backgroundColor='red';
+            }
+            else{
+            divele.style.backgroundColor='green';
+
+            }
+        }, 500);
+    </script>
+</html>
